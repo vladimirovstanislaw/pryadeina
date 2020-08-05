@@ -1,4 +1,4 @@
-package pryadeina.send;
+package pryadeina.conf;
 
 import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.ChannelSftp;
@@ -40,6 +40,7 @@ public class Sender {
 
 			sftpChannel.exit();
 			session.disconnect();
+			System.out.println("Sended");
 		} catch (JSchException e) {
 			e.printStackTrace();
 		} catch (SftpException e) {
